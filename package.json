@@ -1,0 +1,24 @@
+{
+  "name": "slayte.external.input-sftp",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "deps-build-docker": "node -e \"require('fs').writeFileSync('.deps.json',JSON.stringify({dependencies:require('./package.json').dependencies}))\"",
+    "setup": "ssh-keygen -q -t rsa -N '' -b 4096 -f ./key"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "csvtojson": "^2.0.8",
+    "lodash": "^4.17.11",
+    "ssh2": "^0.7.0",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/lodash": "^4.14.119",
+    "@types/node": "^10.12.18",
+    "@types/ssh2": "^0.5.37",
+    "@types/uuid": "^3.4.4",
+    "typescript": "^3.2.2"
+  }
+}
